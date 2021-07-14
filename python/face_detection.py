@@ -59,7 +59,7 @@ else:
 print('[INFO] face detector - NMS threshold = ',nmsThreshold)
 
 # Initialize Vitis-AI/DPU based face detector
-subgraph = create_dpu_runner("/usr/share/vitis_ai_library/models/densebox_640_360/densebox.xmodel")
+subgraph = create_dpu_runner("/usr/share/vitis_ai_library/models/densebox_640_360/densebox_640_360.xmodel")
 dpu = runner.Runner(subgraph, "run")
 dpu_face_detector = FaceDetect(dpu,detThreshold,nmsThreshold)
 dpu_face_detector.start()
